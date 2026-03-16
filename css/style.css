@@ -178,9 +178,10 @@ p:last-child { margin-bottom: 0; }
   z-index: 1000;
   background: var(--navy);
   transition: box-shadow var(--transition);
+  border-bottom: 3px solid var(--yellow);
 }
 .site-header.scrolled {
-  box-shadow: 0 4px 24px rgba(14,58,96,0.25);
+  box-shadow: 0 4px 24px rgba(14,58,96,0.35);
 }
 
 .nav-inner {
@@ -190,28 +191,16 @@ p:last-child { margin-bottom: 0; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px;
+  height: 76px;
 }
 
 .nav-logo {
   display: flex;
-  flex-direction: column;
-  line-height: 1;
+  align-items: center;
 }
-.nav-logo .logo-main {
-  font-family: var(--font-head);
-  font-weight: 700;
-  font-size: 1.4rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--white);
-}
-.nav-logo .logo-sub {
-  font-family: var(--font-body);
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--yellow);
+.nav-logo img {
+  height: 50px;
+  width: auto;
 }
 
 .nav-links {
@@ -282,6 +271,15 @@ p:last-child { margin-bottom: 0; }
   padding: 5rem 3rem 5rem 2rem;
   max-width: 640px;
   margin-left: auto;
+}
+
+.hero-badge-logo {
+  margin-bottom: 1.75rem;
+}
+.hero-badge-logo img {
+  height: 120px;
+  width: auto;
+  filter: drop-shadow(0 4px 16px rgba(0,0,0,0.3));
 }
 
 .hero h1 {
@@ -607,12 +605,26 @@ p:last-child { margin-bottom: 0; }
    ============================================================ */
 .cta-band {
   padding: 5rem 1.5rem;
-  background: var(--dark);
+  background: var(--navy);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-top: 4px solid var(--yellow);
 }
-.cta-band h2 { color: var(--white); margin-bottom: 1rem; }
-.cta-band p { color: rgba(255,255,255,0.7); margin: 0 auto 2.5rem; font-size: 1.1rem; }
-.cta-band .btn-group { justify-content: center; }
+.cta-band::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 420px;
+  height: 420px;
+  background: url('../assets/images/logos/Monogram Patch NO TEXT.png') center/contain no-repeat;
+  opacity: 0.05;
+  pointer-events: none;
+}
+.cta-band h2 { color: var(--white); margin-bottom: 1rem; position: relative; }
+.cta-band p { color: rgba(255,255,255,0.7); margin: 0 auto 2.5rem; font-size: 1.1rem; position: relative; }
+.cta-band .btn-group { justify-content: center; position: relative; }
 
 /* ============================================================
    ABOUT PAGE
@@ -876,9 +888,10 @@ p:last-child { margin-bottom: 0; }
    FOOTER
    ============================================================ */
 .site-footer {
-  background: var(--dark);
+  background: var(--navy);
   color: rgba(255,255,255,0.7);
-  padding: 4rem 1.5rem 2rem;
+  padding: 0;
+  border-top: 4px solid var(--yellow);
 }
 .footer-inner {
   max-width: var(--max-w);
@@ -886,25 +899,18 @@ p:last-child { margin-bottom: 0; }
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1.5fr;
   gap: 3rem;
-  padding-bottom: 3rem;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding: 4rem 1.5rem 3rem;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
 }
-.footer-brand .logo-main {
-  font-family: var(--font-head);
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--white);
-  margin-bottom: 0.25rem;
-}
-.footer-brand .logo-sub {
-  font-family: var(--font-body);
-  font-size: 0.7rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--yellow);
+.footer-brand .footer-logo {
+  height: 64px;
+  width: auto;
   margin-bottom: 1.25rem;
+}
+.footer-brand .footer-monogram {
+  height: 80px;
+  width: auto;
+  margin-bottom: 1rem;
 }
 .footer-brand p { font-size: 0.9rem; max-width: 28ch; line-height: 1.6; }
 
@@ -931,7 +937,8 @@ p:last-child { margin-bottom: 0; }
 
 .footer-bottom {
   max-width: var(--max-w);
-  margin: 2rem auto 0;
+  margin: 0 auto;
+  padding: 1.75rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
