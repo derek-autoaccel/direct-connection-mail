@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — Direct Connection Mail | Get a Quote</title>
+  <meta name="description" content="Ready to launch your direct mail campaign? Contact Direct Connection Mail for a free quote. Located in La Verne, California. Serving clients since 1990.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@400;600;700;800&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    #formSuccess {
+      display: none;
+      text-align: center;
+      padding: 4rem 2rem;
+      background: var(--cream);
+      border-radius: var(--radius);
+    }
+    #formSuccess .success-icon { font-size: 3rem; margin-bottom: 1rem; }
+    #formSuccess h3 { color: var(--navy); margin-bottom: 0.75rem; }
+    #formSuccess p { color: #555; }
+
+    .contact-map {
+      background: var(--cream);
+      border: 2px dashed var(--gray);
+      height: 300px;
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--gray);
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAVIGATION ── -->
+  <header class="site-header" role="banner">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo" aria-label="Direct Connection Mail home">
+        <span class="logo-main">Direct Connection</span>
+        <span class="logo-sub">Mail &amp; Print Marketing</span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="capabilities.html">Capabilities</a></li>
+        <li><a href="work.html">Our Work</a></li>
+        <li><a href="contact.html" class="nav-cta">Get a Quote</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ── PAGE HERO (minimal) ── -->
+    <section style="padding: 8rem 1.5rem 3rem; background: var(--navy);" aria-label="Contact page hero">
+      <div style="max-width:var(--max-w); margin:0 auto;">
+        <span class="eyebrow on-dark">Get in Touch</span>
+        <h1 style="color:var(--white);">Let's Talk<br>About Your Project</h1>
+        <p style="color:rgba(255,255,255,0.75); font-size:1.1rem; max-width:55ch; margin-top:1rem;">
+          Tell us about your campaign goals and we'll get back to you with a quote and recommendations — typically within one business day.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── CONTACT SECTION ── -->
+    <section class="contact-section" aria-labelledby="contact-heading">
+      <div class="contact-inner">
+
+        <!-- FORM -->
+        <div class="contact-form-wrap fade-in">
+          <h2 id="contact-heading">Request a Free Quote</h2>
+          <p class="subhead">Fill out the form below and a member of our team will reach out promptly.</p>
+
+          <form id="contactForm" novalidate aria-label="Contact form">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="firstName">First Name <span aria-hidden="true">*</span></label>
+                <input type="text" id="firstName" name="firstName" required autocomplete="given-name" placeholder="Jane">
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name <span aria-hidden="true">*</span></label>
+                <input type="text" id="lastName" name="lastName" required autocomplete="family-name" placeholder="Smith">
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address <span aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" required autocomplete="email" placeholder="jane@yourorg.com">
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(555) 555-5555">
+              </div>
+              <div class="form-group full">
+                <label for="organization">Organization / Company</label>
+                <input type="text" id="organization" name="organization" autocomplete="organization" placeholder="Your company or organization">
+              </div>
+              <div class="form-group full">
+                <label for="industry">Industry</label>
+                <select id="industry" name="industry">
+                  <option value="" disabled selected>Select your industry</option>
+                  <option value="higher-education">Higher Education</option>
+                  <option value="government">Government</option>
+                  <option value="nonprofit">Non-Profit</option>
+                  <option value="insurance">Insurance</option>
+                  <option value="real-estate">Real Estate</option>
+                  <option value="financial">Financial Services</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group full">
+                <label for="service">Service Interested In</label>
+                <select id="service" name="service">
+                  <option value="" disabled selected>What can we help with?</option>
+                  <option value="full-campaign">Full campaign (lists, design, print, mail)</option>
+                  <option value="print-mail">Print &amp; mail only (I have files ready)</option>
+                  <option value="design">Design &amp; creative</option>
+                  <option value="mailing-list">Mailing list / data</option>
+                  <option value="strategy">Campaign strategy consultation</option>
+                  <option value="specialty-print">Specialty print project</option>
+                  <option value="not-sure">Not sure yet — want to discuss</option>
+                </select>
+              </div>
+              <div class="form-group full">
+                <label for="message">Tell Us About Your Project</label>
+                <textarea id="message" name="message" placeholder="Describe your campaign goals, target audience, timeline, or any other details that would help us give you a better quote..."></textarea>
+              </div>
+            </div>
+
+            <div class="form-submit">
+              <button type="submit" class="btn btn-primary">Send My Request</button>
+              <p class="form-note">We respond within one business day. Your information is kept private and never shared.</p>
+            </div>
+          </form>
+
+          <div id="formSuccess" role="alert">
+            <div class="success-icon" aria-hidden="true">✅</div>
+            <h3>Message Received!</h3>
+            <p>Thank you for reaching out. A member of our team will be in touch within one business day.</p>
+            <div class="btn-group" style="justify-content:center; margin-top:1.5rem;">
+              <a href="work.html" class="btn btn-outline-navy">See Our Work</a>
+              <a href="capabilities.html" class="btn btn-primary">Explore Capabilities</a>
+            </div>
+          </div>
+        </div><!-- / contact-form-wrap -->
+
+        <!-- INFO -->
+        <div class="contact-info-wrap fade-in fade-in-delay-2">
+          <h3>Contact Information</h3>
+
+          <div class="contact-detail">
+            <div class="det-icon" aria-hidden="true">📍</div>
+            <div>
+              <h4>Office &amp; Production</h4>
+              <p>La Verne, California</p>
+              <!-- Update with full address -->
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="det-icon" aria-hidden="true">📞</div>
+            <div>
+              <h4>Phone</h4>
+              <a href="tel:+1XXXXXXXXXX">( ) &mdash;&mdash;&mdash;&mdash;</a>
+              <!-- Update with real phone number -->
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="det-icon" aria-hidden="true">✉️</div>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:info@directconnectionmail.com">info@directconnectionmail.com</a>
+              <!-- Update with real email -->
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="det-icon" aria-hidden="true">🕐</div>
+            <div>
+              <h4>Business Hours</h4>
+              <p>Monday – Friday<br>8:00 AM – 5:00 PM PT</p>
+              <!-- Update with real hours -->
+            </div>
+          </div>
+
+          <!-- TRUST SIGNALS -->
+          <div class="contact-trust">
+            <h4>Why Work With Us</h4>
+            <div class="trust-items">
+              <div class="trust-item">Serving clients since 1990</div>
+              <div class="trust-item">500+ clients across 6 industries</div>
+              <div class="trust-item">Full in-house production — La Verne, CA</div>
+              <div class="trust-item">One partner from strategy to delivery</div>
+              <div class="trust-item">Respond within one business day</div>
+            </div>
+          </div>
+
+          <!-- MAP PLACEHOLDER -->
+          <div class="contact-map" aria-label="Map placeholder — embed Google Maps here">
+            MAP EMBED<br>Google Maps — La Verne, CA
+          </div>
+
+        </div><!-- / contact-info-wrap -->
+
+      </div><!-- / contact-inner -->
+    </section>
+
+    <!-- ── ALTERNATE CONTACT ── -->
+    <section style="padding:3rem 1.5rem; background:var(--cream);" aria-labelledby="alt-contact-heading">
+      <div style="max-width:var(--max-w); margin:0 auto; text-align:center;">
+        <span class="eyebrow">Prefer to Talk?</span>
+        <h2 id="alt-contact-heading" style="font-size:2rem; color:var(--navy); margin-bottom:1rem;">We're Here to Help</h2>
+        <p style="max-width:55ch; margin:0 auto 2rem; color:#555;">
+          If you'd rather skip the form and talk directly with someone about your project, give us a call. We love talking direct mail.
+        </p>
+        <a href="tel:+1XXXXXXXXXX" class="btn btn-primary">Call Us Now</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-main">Direct Connection</div>
+        <div class="logo-sub">Mail &amp; Print Marketing</div>
+        <p>Full-service print and direct mail marketing. Serving clients across California and nationwide since 1990.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="capabilities.html">Capabilities</a></li>
+          <li><a href="work.html">Our Work</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="capabilities.html">Mailing Lists &amp; Data</a></li>
+          <li><a href="capabilities.html">Design &amp; Creative</a></li>
+          <li><a href="capabilities.html">Print Production</a></li>
+          <li><a href="capabilities.html">Mailing &amp; Fulfillment</a></li>
+          <li><a href="capabilities.html">Campaign Strategy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-contact">
+        <h5>Contact Us</h5>
+        <p>
+          La Verne, California<br>
+          <a href="tel:+1XXXXXXXXXX">( ) &mdash;&mdash;&mdash;&mdash;</a><br>
+          <a href="mailto:info@directconnectionmail.com">info@directconnectionmail.com</a>
+        </p>
+        <div style="margin-top:1.25rem;">
+          <a href="contact.html" class="btn btn-primary" style="font-size:0.85rem; padding:0.65rem 1.5rem;">Get a Quote</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 Direct Connection Mail. All rights reserved.</span>
+      <span>La Verne, California &mdash; Serving clients since 1990</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
