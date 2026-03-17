@@ -288,6 +288,12 @@ p:last-child { margin-bottom: 0; }
   font-size: clamp(2.5rem, 5vw, 4.5rem);
 }
 
+/* Stacked 3-line declarative hero variant */
+.hero-h1-stack {
+  font-size: clamp(2.2rem, 4.2vw, 4rem);
+  line-height: 1.2;
+}
+
 .hero h1 .accent-line {
   color: var(--yellow);
   display: block;
@@ -598,6 +604,142 @@ p:last-child { margin-bottom: 0; }
 .testimonial-author span {
   font-size: 0.85rem;
   color: #888;
+}
+
+/* ============================================================
+   IN-HOUSE CALLOUT BAND
+   ============================================================ */
+.inhouse-band {
+  background: var(--dark);
+  color: var(--white);
+  padding: 5rem 1.5rem;
+  overflow: hidden;
+}
+.inhouse-band-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+.inhouse-statement {
+  font-family: var(--font-head);
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+}
+.inhouse-statement .accent { color: var(--yellow); }
+
+.inhouse-pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-left: 2px solid rgba(255,255,255,0.1);
+  padding-left: 3rem;
+}
+.inhouse-pillar {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+.inhouse-pillar-num {
+  font-family: var(--font-head);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--yellow);
+  line-height: 1;
+  flex-shrink: 0;
+  width: 2.5rem;
+}
+.inhouse-pillar h4 {
+  font-size: 1rem;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.35rem;
+}
+.inhouse-pillar p {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.55);
+  margin: 0;
+  max-width: 100%;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   FAQ ACCORDION
+   ============================================================ */
+.faq-section { padding: var(--section-pad); background: var(--cream); }
+.faq-list {
+  max-width: 820px;
+  margin: 0 auto;
+}
+.faq-item { border-bottom: 1px solid #cec8c0; }
+.faq-item:first-child { border-top: 1px solid #cec8c0; }
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-head);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--navy);
+  transition: color var(--transition);
+}
+.faq-question:hover { color: var(--dark); }
+
+.faq-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  border: 2px solid var(--navy);
+  border-radius: 50%;
+  position: relative;
+  transition: background var(--transition), border-color var(--transition);
+}
+.faq-icon::before,
+.faq-icon::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  background: var(--navy);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.faq-icon::before {
+  width: 10px; height: 2px;
+  transform: translate(-50%, -50%);
+}
+.faq-icon::after {
+  width: 2px; height: 10px;
+  transform: translate(-50%, -50%);
+}
+.faq-item.open .faq-icon {
+  background: var(--navy);
+  border-color: var(--navy);
+}
+.faq-item.open .faq-icon::before,
+.faq-item.open .faq-icon::after { background: var(--white); }
+.faq-item.open .faq-icon::after { transform: translate(-50%, -50%) rotate(90deg); opacity: 0; }
+
+.faq-answer {
+  padding-bottom: 1.75rem;
+}
+.faq-answer p {
+  color: #555;
+  margin: 0;
+  max-width: 100%;
+  line-height: 1.75;
 }
 
 /* ============================================================
@@ -1019,6 +1161,9 @@ p:last-child { margin-bottom: 0; }
   .hero { grid-template-columns: 1fr; min-height: auto; }
   .hero-content { padding: 4rem 1.5rem; max-width: 100%; margin: 0; }
   .hero-visual { display: none; }
+
+  .inhouse-band-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .inhouse-pillars { border-left: none; padding-left: 0; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; }
 
   .value-grid,
   .services-grid,
