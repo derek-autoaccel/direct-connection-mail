@@ -142,10 +142,10 @@ p:last-child { margin-bottom: 0; }
   border-color: var(--yellow);
 }
 .btn-primary:hover {
-  background: #e6d300;
-  border-color: #e6d300;
+  background: #c9a028;
+  border-color: #c9a028;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(255,234,5,0.35);
+  box-shadow: 0 8px 24px rgba(237,183,46,0.35);
 }
 
 .btn-outline-white {
@@ -200,7 +200,7 @@ p:last-child { margin-bottom: 0; }
   z-index: 1000;
   background: var(--navy);
   transition: box-shadow var(--transition);
-  border-bottom: 3px solid var(--yellow);
+  border-bottom: 2px solid rgba(237,183,46,0.4);
 }
 .site-header.scrolled {
   box-shadow: 0 4px 24px rgba(14,58,96,0.35);
@@ -254,7 +254,7 @@ p:last-child { margin-bottom: 0; }
   padding: 0.5rem 1.25rem !important;
 }
 .nav-cta:hover {
-  background: #e6d300 !important;
+  background: #c9a028 !important;
 }
 
 .nav-toggle {
@@ -372,8 +372,9 @@ p:last-child { margin-bottom: 0; }
    STATS BAR
    ============================================================ */
 .stats-bar {
-  background: var(--yellow);
+  background: var(--navy);
   padding: 2rem 1.5rem;
+  border-bottom: 3px solid rgba(255,255,255,0.08);
 }
 .stats-bar-inner {
   max-width: var(--max-w);
@@ -387,7 +388,7 @@ p:last-child { margin-bottom: 0; }
   font-family: var(--font-head);
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--navy);
+  color: var(--white);
   line-height: 1;
 }
 .stat-item .label {
@@ -395,7 +396,7 @@ p:last-child { margin-bottom: 0; }
   font-size: 0.85rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--dark);
+  color: rgba(255,255,255,0.6);
   margin-top: 0.25rem;
 }
 
@@ -411,11 +412,58 @@ p:last-child { margin-bottom: 0; }
 .section-header p { font-size: 1.1rem; color: #444; }
 
 /* ============================================================
+   CAMPAIGN SPOTLIGHT BAND
+   ============================================================ */
+.spotlight-band {
+  background: var(--white);
+  border-top: 1px solid #e8e4de;
+  border-bottom: 1px solid #e8e4de;
+  padding: 2.25rem 1.5rem;
+}
+.spotlight-inner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.spotlight-tag {
+  font-family: var(--font-head);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--white);
+  background: var(--navy);
+  padding: 0.35rem 0.9rem;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+.spotlight-body { flex: 1; min-width: 200px; }
+.spotlight-body h3 {
+  font-size: 1.1rem;
+  color: var(--navy);
+  margin-bottom: 0.25rem;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.spotlight-body p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+  max-width: 60ch;
+}
+.spotlight-band .btn {
+  white-space: nowrap;
+  font-size: 0.85rem;
+  padding: 0.65rem 1.5rem;
+}
+
+/* ============================================================
    VALUE PROPS
    ============================================================ */
 .value-props {
   padding: 5rem 1.5rem;
-  background: var(--cream);
+  background: var(--white);
 }
 .value-grid {
   display: grid;
@@ -425,7 +473,8 @@ p:last-child { margin-bottom: 0; }
 .value-card {
   background: var(--white);
   padding: 2.5rem 2rem;
-  border-top: 4px solid var(--yellow);
+  border: 1px solid #e8e4de;
+  border-top: 4px solid var(--navy);
   border-radius: var(--radius);
 }
 .value-card .icon {
@@ -466,7 +515,7 @@ p:last-child { margin-bottom: 0; }
   font-family: var(--font-head);
   font-size: 3rem;
   font-weight: 700;
-  color: var(--yellow);
+  color: rgba(14,58,96,0.18);
   line-height: 1;
   margin-bottom: 0.75rem;
 }
@@ -534,7 +583,7 @@ p:last-child { margin-bottom: 0; }
 /* ============================================================
    WORK / PORTFOLIO
    ============================================================ */
-.work-section { padding: var(--section-pad); background: var(--cream); }
+.work-section { padding: var(--section-pad); background: var(--white); }
 
 .work-grid {
   display: grid;
@@ -592,7 +641,9 @@ p:last-child { margin-bottom: 0; }
 }
 .testimonial-card {
   padding: 2.5rem;
-  background: var(--cream);
+  background: var(--white);
+  border: 1px solid #e8e4de;
+  border-left: 4px solid var(--navy);
   border-radius: var(--radius);
   position: relative;
 }
@@ -601,11 +652,11 @@ p:last-child { margin-bottom: 0; }
   font-family: Georgia, serif;
   font-size: 6rem;
   line-height: 1;
-  color: var(--yellow);
+  color: var(--navy);
   position: absolute;
   top: -0.5rem;
   left: 1.5rem;
-  opacity: 0.7;
+  opacity: 0.12;
 }
 .testimonial-card blockquote {
   font-size: 1rem;
@@ -632,7 +683,7 @@ p:last-child { margin-bottom: 0; }
    IN-HOUSE CALLOUT BAND
    ============================================================ */
 .inhouse-band {
-  background: var(--dark);
+  background: var(--navy);
   color: var(--white);
   padding: 5rem 1.5rem;
   overflow: hidden;
