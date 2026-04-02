@@ -33,7 +33,7 @@
   --transition: 0.25s ease;
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
   font-family: var(--font-body);
@@ -42,6 +42,7 @@ body {
   color: var(--dark);
   background: var(--white);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 img { max-width: 100%; display: block; }
@@ -82,7 +83,7 @@ h4 { font-size: 1.2rem; }
   display: inline-block;
   margin-bottom: 0.75rem;
 }
-.eyebrow.on-dark { color: var(--yellow); }
+.eyebrow.on-dark { color: rgba(255,255,255,0.6); }
 
 p { margin-bottom: 1rem; max-width: 70ch; }
 p:last-child { margin-bottom: 0; }
@@ -100,7 +101,7 @@ p:last-child { margin-bottom: 0; }
   left: 0;
   top: 0.1em;
   background: var(--navy);
-  color: var(--yellow);
+  color: var(--white);
   font-size: 0.65rem;
   width: 1.25rem;
   height: 1.25rem;
@@ -317,7 +318,7 @@ p:last-child { margin-bottom: 0; }
 }
 
 .hero h1 .accent-line {
-  color: var(--yellow);
+  color: var(--white);
   display: block;
 }
 
@@ -358,7 +359,7 @@ p:last-child { margin-bottom: 0; }
   font-family: var(--font-head);
   font-size: 2.2rem;
   font-weight: 700;
-  color: var(--yellow);
+  color: var(--white);
   line-height: 1;
 }
 .hero-badge .label {
@@ -702,7 +703,7 @@ p:last-child { margin-bottom: 0; }
   line-height: 1.05;
   letter-spacing: 0.02em;
 }
-.inhouse-statement .accent { color: var(--yellow); }
+.inhouse-statement .accent { color: var(--white); }
 
 .inhouse-pillars {
   display: flex;
@@ -720,7 +721,7 @@ p:last-child { margin-bottom: 0; }
   font-family: var(--font-head);
   font-size: 1.8rem;
   font-weight: 700;
-  color: var(--yellow);
+  color: rgba(255,255,255,0.3);
   line-height: 1;
   flex-shrink: 0;
   width: 2.5rem;
@@ -824,7 +825,7 @@ p:last-child { margin-bottom: 0; }
   text-align: center;
   position: relative;
   overflow: hidden;
-  border-top: 4px solid var(--yellow);
+  border-top: none;
 }
 .cta-band::before {
   content: '';
@@ -916,7 +917,7 @@ p:last-child { margin-bottom: 0; }
   font-family: var(--font-head);
   font-size: 5rem;
   font-weight: 700;
-  color: var(--yellow);
+  color: rgba(14,58,96,0.15);
   line-height: 1;
 }
 .cap-detail h3 {
@@ -1106,7 +1107,7 @@ p:last-child { margin-bottom: 0; }
   background: var(--navy);
   color: rgba(255,255,255,0.7);
   padding: 0;
-  border-top: 4px solid var(--yellow);
+  border-top: 4px solid rgba(255,255,255,0.12);
 }
 .footer-inner {
   max-width: var(--max-w);
@@ -1181,14 +1182,14 @@ p:last-child { margin-bottom: 0; }
   left: 12.5%;
   right: 12.5%;
   height: 2px;
-  background: rgba(255,234,5,0.3);
+  background: rgba(255,255,255,0.15);
 }
 .process-step { text-align: center; padding: 0 1.5rem; position: relative; }
 .step-num {
   width: 4rem;
   height: 4rem;
-  background: var(--yellow);
-  color: var(--dark);
+  background: rgba(255,255,255,0.15);
+  color: var(--white);
   font-family: var(--font-head);
   font-size: 1.4rem;
   font-weight: 700;
