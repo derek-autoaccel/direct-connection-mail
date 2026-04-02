@@ -2,7 +2,7 @@
    DIRECT CONNECTION MAIL — Main Stylesheet
    Brand Colors:
      Navy:     #0E3A60
-     Yellow:   #FFEA05
+     Yellow:   #EDB72E
      Cream:    #F3EADF
      Dark:     #191818
      Gray:     #B1B1B1
@@ -15,7 +15,7 @@
 
 :root {
   --navy:    #0E3A60;
-  --yellow:  #FFEA05;
+  --yellow:  #EDB72E;
   --cream:   #F3EADF;
   --dark:    #191818;
   --gray:    #B1B1B1;
@@ -23,9 +23,9 @@
   --navy-light: #1a5290;
   --dark-80: rgba(25,24,24,0.8);
 
-  --font-head: 'Barlow Condensed', sans-serif;
+  --font-head: 'Poppins', sans-serif;
   --font-script: 'Dancing Script', cursive;
-  --font-body: 'Atkinson Hyperlegible', sans-serif;
+  --font-body: 'Poppins', sans-serif;
 
   --max-w: 1200px;
   --section-pad: 5rem 1.5rem;
@@ -56,7 +56,7 @@ h1, h2, h3, h4, h5 {
   letter-spacing: 0.02em;
   text-transform: uppercase;
 }
-h1 { font-size: clamp(2.8rem, 6vw, 5rem); }
+h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); }
 h2 { font-size: clamp(2rem, 4vw, 3.2rem); }
 h3 { font-size: clamp(1.4rem, 2.5vw, 2rem); }
 h4 { font-size: 1.2rem; }
@@ -86,6 +86,28 @@ h4 { font-size: 1.2rem; }
 
 p { margin-bottom: 1rem; max-width: 70ch; }
 p:last-child { margin-bottom: 0; }
+
+/* ── Star List (brand iconography) ── */
+.star-list { list-style: none; padding: 0; }
+.star-list li {
+  padding-left: 2rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+.star-list li::before {
+  content: '★';
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  background: var(--navy);
+  color: var(--yellow);
+  font-size: 0.65rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /* ── Utility ── */
 .container { max-width: var(--max-w); margin: 0 auto; padding: 0 1.5rem; }
